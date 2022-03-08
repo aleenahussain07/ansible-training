@@ -1,0 +1,6 @@
+- hosts: localhost
+  tasks:
+    - name: Insert a line at the end of a file.
+      lineinfile:
+        path: /root/women/anything
+        line: last
