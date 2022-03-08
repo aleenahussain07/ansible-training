@@ -1,0 +1,8 @@
+- hosts: all
+  tasks:
+    - name: Install Apache
+      block:
+        - yum: name={{ item }} state=installed
+          with_items:
+            - httpd
+            - memcached
