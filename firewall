@@ -1,0 +1,19 @@
+- hosts: all
+  tasks:
+    - name: Install firewalld
+      yum:
+        name: firewalld
+        state: latest
+    - name: start firewalld
+      service:
+        name: firewalld
+        state: started
+        enabled: yes
+      become: yes
+    - name: enable 1234
+      firewalld:
+        zone: public
+        port: 1234/tcp
+        permanent: true
+        state: enabled
+      become: yes
