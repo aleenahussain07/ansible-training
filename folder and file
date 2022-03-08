@@ -1,0 +1,8 @@
+mkdir women
+cd women
+vi hosts
+192.168.0.61
+192.168.0.62
+cat hosts
+192.168.0.61
+192.168.0.62
