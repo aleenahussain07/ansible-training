@@ -18,3 +18,13 @@ top | head -3 | tail -1
           SWAP: "{{ ansible_memory_mb.swap.total }}"
       debug:
          msg: "{{ msg.split('\n') }}"
+
+FOR CPU USAGE
+---
+- hosts: all
+  tasks:
+    - name: cpu usage
+      shell: top | head -3 | tail -1
+      register: space
+    - debug:
+           var: space
