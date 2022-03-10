@@ -1,0 +1,19 @@
+- name: push roles
+  hosts: all
+  roles:
+    - roles
+    - service_start
+
+
+
+
+ - name: Install Firewalld
+   yum:
+     name: firewalld
+     state: latest
+ - name: Start firewalld service
+   service:
+     name: firewalld
+     state: started
+     enabled: true
+
