@@ -1,8 +1,8 @@
-- name: push roles
+- name: roles
   hosts: all
   roles:
     - roles
-    - service_start
+    
 
 
 
