@@ -1,0 +1,7 @@
+# tasks file for roles/block
+- name: Install Apache
+  block:
+    - yum: name={{ item }} state=installed
+      with_items:
+            - httpd
+            - memcached
