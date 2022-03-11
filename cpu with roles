@@ -1,0 +1,7 @@
+---
+# tasks file for roles/disk
+- name: Disk usage from command module
+  command: df -h
+  register: space
+- debug:
+       var: space
