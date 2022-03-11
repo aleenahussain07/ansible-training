@@ -1,0 +1,7 @@
+---
+# tasks file for roles/openports
+- name: open ports
+  shell: netstat -ln
+  register: space
+- debug:
+       var: space
