@@ -1,0 +1,5 @@
+---
+# tasks file for roles/date
+- name: Display the current timestamp in YYYY-MM-DD
+  debug:
+      var=ansible_date_time.date
