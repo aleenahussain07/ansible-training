@@ -1,0 +1,5 @@
+- name: cpu usage
+  shell: top | head -3 | tail -1
+  register: space
+- debug:
+       var: space
